@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <div style="color:green;font-size:50px;">
+            <script language="javascript">
+                var D1_sch=prompt("Data1>Data2 Data1=","");
+                var G1_sch=prompt("Godzina1>Godzina2 Godzina1=","");
+                var D2_sch=prompt("Data1>Data2 Data2=","");
+                var G2_sch=prompt("Godzina1>Godzina2 Godzina2=","");
+                var sekund_sch;
+                var a=parseFloat (D1_sch);
+                var b=parseFloat (D2_sch);
+                var c=parseFloat (G1_sch);
+                var d=parseFloat (G2_sch);
+                    sekund_sch=((a-b)*24-c-d)*3600;
+                    document.write("Ilość sekund miezy dniami" +a+ "i" +b+ "=" +sekund_sch+ "s"+"<br>");
+            </script>
+        </div>
+    </body>
+</html>

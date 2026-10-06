@@ -1,0 +1,22 @@
+<html> 
+         <body> 
+          <div style="color:green;font-size:38px;"> 
+            <script language="JavaScript"> 
+// Maciej Schröder  2P   17.09.2029 
+// Zadanie 11  
+              var D1_schr=prompt("Data1=",""); 
+              var D2_schr=prompt("Data2=",""); 
+              var sekund; 
+              var a=parseFloat(D1_schr); 
+              var b=parseFloat(D2_schr); 
+                sekund=(a-b)*24*60*60; 
+              document.write("Ilość sekund między dniami "+a+" i "+b+" = "+sekund+"<br>"); 
+                function okno_zamknij_bilyi() 
+                 { 
+                   window.close() 
+                 } 
+              </script> 
+            </div> 
+          <input type="button" value="zamknij okno" onclick="okno_zamknij_bilyi()"/> 
+        </body> 
+       </html> 
