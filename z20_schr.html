@@ -1,0 +1,65 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+function AB_sch()
+{
+    var xa_sch = parseFloat(document.getElementById('Ax').value);
+    var ya_sch = parseFloat(document.getElementById('Ay').value);
+    var xb_sch = parseFloat(document.getElementById('Bx').value);
+    var yb_sch = parseFloat(document.getElementById('By').value);
+    var ab_sch = Math.sqrt(Math.pow(xb_sch-xa_sch, 2) + Math.pow(yb_sch-ya_sch, 2));
+
+    document.getElementById("nazwa").innerHTML = "Dlugosc boku AB = " + ab_sch.toFixed(2);
+}
+
+function BC_sch()
+{
+    var xb_sch = parseFloat(document.getElementById('Bx').value);
+    var yb_sch = parseFloat(document.getElementById('By').value);
+    var xc_sch = parseFloat(document.getElementById('Cx').value);
+    var yc_sch = parseFloat(document.getElementById('Cy').value);
+    var bc_sch = Math.sqrt(Math.pow(xc_sch-xb_sch, 2) + Math.pow(yc_sch-yb_sch, 2));
+
+    document.getElementById("nazwa").innerHTML = "Dlugosc boku BC = " + bc_sch.toFixed(2);
+}
+
+function AC_sch()
+{
+    var xa_sch = parseFloat(document.getElementById('Ax').value);
+    var ya_sch = parseFloat(document.getElementById('Ay').value);
+    var xc_sch = parseFloat(document.getElementById('Cx').value);
+    var yc_sch = parseFloat(document.getElementById('Cy').value);
+    var ac_sch = Math.sqrt(Math.pow(xc_sch-xa_sch, 2) + Math.pow(yc_sch-ya_sch, 2));
+
+    document.getElementById("nazwa").innerHTML = "Dlugosc boku AC = " + ac_sch.toFixed(2);
+}
+
+</script>
+
+<h1>Dlugosci bokow trojkata</h1>
+
+Punkt Ax: <input type="text" id="Ax" value="0"><br><br>
+Punkt Ay: <input type="text" id="Ay" value="0"><br><br>
+
+Punkt Bx: <input type="text" id="Bx" value="0"><br><br>
+Punkt By: <input type="text" id="By" value="0"><br><br>
+
+Punkt Cx: <input type="text" id="Cx" value="0"><br><br>
+Punkt Cy: <input type="text" id="Cy" value="0"><br><br>
+
+<input type="button" name="AB_sch" value="AB" onclick="AB_sch()"><br><br>
+<input type="button" name="BC_sch" value="BC" onclick="BC_sch()"><br><br>
+<input type="button" name="AC_sch" value="AC" onclick="AC_sch()"><br><br>
+
+<div style="color:red; font-size:50px;" id="nazwa"></div>
+
+</body>
+</html>

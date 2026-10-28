@@ -1,0 +1,38 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 25</title>
+</head>
+<body style="color: blue; font-size: 50px;">
+
+<script type="text/javascript">
+
+
+var No = prompt("Podaj początkową ilość atomów:");
+var t = prompt("Podaj czas t w latach:");
+var T12 = prompt("Podaj czas połowicznego rozpadu:");
+
+No = parseFloat(No);
+t = parseFloat(t);
+T12 = parseFloat(T12);
+
+var lambda = Math.log(2) / T12;
+
+document.write("N0=: " +No.toFixed(2)+ " [sztuk]<br>");
+
+document.write("t=  " +t.toFixed(2)+ " [lat]<br>");
+
+document.write("T1/2 " +T12.toFixed(2)+ " [lat]<br>");
+
+document.write("Lambda = " +lambda.toFixed(7)+ " [1/rok]<br>");
+
+var N = No * Math.pow(Math.E - lambda * t);
+
+document.write("N = " +N.toFixed(2)+ " [sztuk]");
+
+</script>
+
+</body>
+</html>
+<!--Maciej Schröder-->

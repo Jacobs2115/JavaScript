@@ -1,0 +1,53 @@
+<html>  
+<head>  
+<title> 
+Przykład obliczenia V  i  Pc walca 
+</title> 
+<script language="JavaScript"> 
+function V(d,x) 
+{ 
+d_liczba=parseFloat(d) 
+x_liczba=parseFloat(x) 
+L_sch= Math.sqrt(d_liczba*d_liczba+x_liczba*x_liczba)
+document.getElementsByName('l_sch')[0].value=L_sch.toFixed(2);   /* na dokument  */ 
+alert("L_sch="+L_sch.toFixed(2)+"");                                                  
+pokaz1.innerHTML="L_sch="+L_sch.toFixed(2)+""+"<br>";        
+ } 
+function Pc(d,x) 
+{ 
+    d_liczba=parseFloat(d) 
+    x_liczba=parseFloat(x) 
+   L_sch= Math.sqrt(d_liczba*d_liczba+x_liczba*x_liczba)
+      alfa_rad= Math.asin( d_liczba/ L_sch )
+      alfa_s=(alfa_rad / Math.PI)* 180
+
+   sin_alfa= d_liczba / L_sch
+   document.getElementsByName('alfa')[0].value=alfa_s.toFixed(2); 
+   alert("Pc="+alfa_s.toFixed(2)+" "); 
+   pokaz2.innerHTML="Pc="+alfa_s.toFixed(2)+""; 
+} 
+       </script> 
+</head>  
+<body>  
+
+<br> <br> 
+<form name="formularz" action="..." onsubmit="V(this.promien.value,this.wysokosc.value); 
+Pc(this.promien.value,this.wysokosc.value);return false">   
+     Podaj r= 
+        <input  size="6"  name="promien"> 
+     Podaj h= 
+        <input  size="6"  name="wysokosc"> 
+                       <br>   <br> 
+         <input  TYPE="submit"  Value="oblicz" > 
+                       <br>   <br> 
+       L_sch= 
+           <input  size="6"  name="l_sch"> 
+       Alfa= 
+          <input  size="6"  name="alfa"> 
+</form> 
+<table> 
+              <tr id="pokaz1"></tr> 
+              <tr id="pokaz2"></tr> 
+</table> 
+</body>  
+</html> 
