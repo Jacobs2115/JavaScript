@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadanie 32 – Schroder</title>
+</head>
+<body bgcolor="yellow">
+
+<div style="color:green;font-size:45px;">
+<script type="text/javascript">
+
+function Dom(wysokosc, liczba_pieter, kolor, liczba_okien)
+{
+this.wysokosc = wysokosc;
+this.liczba_pieter = liczba_pieter;
+this.kolor = kolor;
+this.liczba_okien = liczba_okien;
+}
+
+Dom.prototype.rok_budowy = 2010;
+
+Dom.prototype.Dom_pokaz_schroder = function ()
+{
+document.write("Rok budowy: " + this.rok_budowy + "<br>");
+};
+
+Dom.prototype.wypisz = function ()
+{
+document.write("Wysokość: " + this.wysokosc + "<br>");
+document.write("Liczba pięter: " + this.liczba_pieter + "<br>");
+document.write("Kolor: " + this.kolor + "<br>");
+document.write("Liczba okien: " + this.liczba_okien + "<br>");
+this.Dom_pokaz_schroder();
+document.write("<br>");
+};
+
+var dom1 = new Dom("10 metrów", 2, "biały", 8);
+var dom2 = new Dom("15 metrów", 3, "szary", 12);
+var dom3 = new Dom("8 metrów", 1, "żółty", 6);
+
+document.write("Moje nazwisko to SCHRODER, numer w dzienniku 18, obiekt to Dom<br>");
+document.write("Dane pierwszego obiektu:<br>");
+dom1.wypisz();
+
+document.write("Dane drugiego obiektu:<br>");
+dom2.wypisz();
+
+document.write("Dane trzeciego obiektu:<br>");
+dom3.wypisz();
+
+</script>
+</div>
+
+<div style="color:blue;font-size:28px;">
+<br>
+Programowanie obiektowe:<br>
+Słowo kluczowe prototype stosowane jest do dodawania właściwości i metod do konstruktora. Dzięki temu obiekty utworzone na jego podstawie posiadają te właściwości i metody.<br>
+<br>
+Słowo kluczowe new stosowane jest do tworzenia nowego obiektu na podstawie konstruktora.
+</div>
+
+</body>
+</html>

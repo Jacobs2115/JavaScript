@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadanie 31 – Schroder</title>
+</head>
+<body bgcolor="lightblue">
+
+<div style="color:red;font-size:50px;">
+<script type="text/javascript">
+var Dom = {
+wysokosc: "10 metrów",
+liczba_pieter: 2,
+kolor: "biały",
+Dom_wyswietl_schroder: function ()
+{
+document.write("Dane obiektu Dom<br>");
+document.write("Wysokość: " + this.wysokosc + "<br>");
+document.write("Liczba pięter: " + this.liczba_pieter + "<br>");
+document.write("Kolor: " + this.kolor + "<br>");
+}
+}
+
+Dom.Dom_wyswietl_schroder();
+
+Dom.rok_budowy = 2010;
+
+Dom.Dom_pokaz_schroder = function ()
+{
+alert("Rok budowy: " + this.rok_budowy);
+}
+
+Dom.Dom_pokaz_schroder();
+</script>
+</div>
+
+<br>
+
+<div style="color:blue;font-size:33px;">
+<br>
+Mój numer w dzienniku jest 18 i moje dane to:<br>
+Obiekt to Dom<br>
+pola:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wysokosc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;liczba_pieter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kolor<br>
+metoda:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dom_wyswietl_schroder<br>
+<br>
+nowe pole: rok_budowy<br>
+wartość pola: 2010<br>
+nowa metoda: Dom_pokaz_schroder
+</div>
+
+</body>
+</html>

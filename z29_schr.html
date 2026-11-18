@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 29 – Schroder</title>
+</head>
+<body>
+
+<h1>1. W jaki sposób można określić właściwość danego obiektu?</h1>
+<p>Sposób 1 – za pomocą kropki:</p>
+<p>auto.marka = "Opel Omega";</p>
+<p>auto.rok = 1996;</p>
+<p>Sposób 2 – za pomocą nawiasów kwadratowych:</p>
+<p>auto["cena"] = 25000;</p>
+
+<h1>2. W jaki sposób można odwołać się do pól i metod?</h1>
+<p>Do właściwości i metod odwołujemy się, podając nazwę obiektu, kropkę i nazwę właściwości lub metody.</p>
+<p>Przykład: samochod1.kolor</p>
+<p>Przykład: samochod1.wypisz()</p>
+
+<h1>3. Wymień cechy charakterystyczne konstruktora.</h1>
+<p>1. Jest uruchamiany automatycznie podczas tworzenia obiektu.</p>
+<p>2. Nazywa się tak samo jak klasa.</p>
+<p>3. Nie zwraca żadnej wartości.</p>
+<p>4. Może przyjmować argumenty, tak jak zwykła funkcja lub metoda.</p>
+
+<h1>4. Konstruowanie obiektu – trzy pola i jedna metoda</h1>
+<pre>
+var osoba_1 =
+{
+nazwisko: "Kowalski",
+imie: "Jan",
+zawod: "piekarz",
+wyswietl: function ()
+{
+document.write(this.nazwisko + " " + this.imie);
+}
+}
+osoba_1.wyswietl();
+</pre>
+
+<h1>5. Znaczenie słowa this. Jak oddzielamy pola oraz metody?</h1>
+<p>Słowo kluczowe this pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu. Pola i metody w obrębie jednego obiektu oddzielamy przecinkami.</p>
+
+<h1>6. Konstruktor w JavaScript – przykład i opis</h1>
+<p>W JavaScript funkcja może pełnić rolę konstruktora. Konstruktor tworzy obiekt i przypisuje wartości jego właściwościom.</p>
+<pre>
+function klient(nazwisko_k, imie_k, zawod_k)
+{
+this.nazwisko = nazwisko_k;
+this.imie = imie_k;
+this.zawod = zawod_k;
+}
+</pre>
+
+<h1>7. Znaczenie słowa kluczowego new</h1>
+<p>Słowo kluczowe new służy do utworzenia nowego obiektu na podstawie konstruktora.</p>
+<pre>
+var osoba1 = new klient("Kowalski", "Jan", "kierowca");
+</pre>
+
+<h1>8. Znaczenie słowa kluczowego prototype</h1>
+<p>Właściwość prototype służy do dodawania metod i właściwości do konstruktora. Dzięki temu każdy nowo utworzony obiekt na podstawie tego konstruktora będzie posiadał dodane właściwości i metody.</p>
+<pre>
+function klient()
+{
+this.nazwisko = "Bielski";
+this.imie = "Paweł";
+}
+
+klient.prototype.zawod = "kierowca";
+
+klient.prototype.pisz_dane = function ()
+{
+document.write(this.nazwisko + " " + this.imie);
+};
+
+var osoba1 = new klient();
+osoba1.pisz_dane();
+</pre>
+
+</body>
+</html>
